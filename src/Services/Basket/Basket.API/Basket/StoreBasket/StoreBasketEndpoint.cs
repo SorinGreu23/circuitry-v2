@@ -8,16 +8,19 @@
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapPost("/basket", async (StoreBasketRequest request, ISender sender) =>
-            {
-                var command = request.Adapt<StoreBasketCommand>();
+            app.MapPost(
+                "/basket",
+                async (StoreBasketRequest request, ISender sender) =>
+                {
+                    var command = request.Adapt<StoreBasketCommand>();
 
-                var result = await sender.Send(command);
+                    var result = await sender.Send(command);
 
-                var response = result.Adapt<StoreBasketResponse>();
+                    var response = result.Adapt<StoreBasketResponse>();
 
-                return Results.Created($"/basket/{response.UserName}", response);
-            });
+                    return Results.Created($"/basket/{response.UserName}", response);
+                }
+            );
         }
     }
 }

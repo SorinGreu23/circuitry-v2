@@ -12,8 +12,6 @@
         }
 
         // Required for mapping
-        public ShoppingCart()
-        {
-        }
+        public ShoppingCart() { }
     }
 }
