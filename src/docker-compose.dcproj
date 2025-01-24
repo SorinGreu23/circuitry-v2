@@ -6,6 +6,10 @@
     <DockerPublishLocally>False</DockerPublishLocally>
     <ProjectGuid>eeabc43d-4014-4d09-97ab-4fe33d9211c9</ProjectGuid>
   </PropertyGroup>
+  <PropertyGroup>
+    <DockerServiceName>catalog.api</DockerServiceName>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
