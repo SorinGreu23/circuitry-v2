@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.idea
+/src/Services/Discount/Discount.Grpc/discountdb
+/src/Services/Discount/Discount.Grpc/discountdb-shm
+/src/Services/Discount/Discount.Grpc/discountdb-wal
